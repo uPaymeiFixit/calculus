@@ -1,18 +1,17 @@
-function f(x) 
-{
-	return x/(1+Math.pow(x));
-}
-
-
+/**
+*	@title Calculus Approximation Functions
+*	@author Josh Gibbs - uPaymeiFixit@gmail.com
+*/
 
 approximations = {
 
-	/*
-	@param f : the function being approximated
-	@param a : the starting interval
-	@param b : the ending interval
-	@param n : number of intervals
-	*/
+	/**
+ 	*	@param {function} f Function being approximated, takes one integer argument
+ 	*	@param {number} a Lower bound of function
+ 	*	@param {number} b Upper bound of function
+ 	*	@param {number} n Quatity of subintervals
+ 	*/
+
 	left: function(f, a, b, n)
 	{
 		deltax = (b-a)/n
@@ -77,4 +76,9 @@ approximations = {
 		return deltax/3 * sum
 	}
 
+}
+
+// This is an example of a valid first parameter to be passed into approximations' functions
+function f(x) {
+	return x/(1+Math.pow(x));
 }
